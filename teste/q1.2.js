@@ -1,4 +1,4 @@
-const gauss_seidel = require("../sistemas-lineares/gauss-seidel")
+const gauss = require("../sistemas-lineares/gauss")
 
 const Ab = [
     [15, 17, 19, 3890], // metal
@@ -6,6 +6,4 @@ const Ab = [
     [1, 1.2, 1.5, 282] // borracha
 ]
 
-var x = [0, 0, 0]
-
-console.log(gauss_seidel(Ab, x, 0.01, 90))
+console.log(gauss(Ab, 3))

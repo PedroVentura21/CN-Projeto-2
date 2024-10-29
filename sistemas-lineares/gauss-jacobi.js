@@ -1,10 +1,9 @@
 const org_sistema = require('./org_sistema')
 
-function gauss_seidel(Ab, x, tol, limit){
+function gauss_jacobi(Ab, x, tol, limit){
     const n = x.length // quantidade de equações
     Ab = org_sistema(Ab, n) // organizando o sistema para melhor desempenho
     
-    console.log(Ab)
     // quantidade maxima de iterações
     for(let k=0; k < limit; k++){
         // copiando os valores atual de x
@@ -32,7 +31,7 @@ function gauss_seidel(Ab, x, tol, limit){
 
             for(let j=0; j < n ; j++){
                 if(i !== j)
-                    soma += Ab[i][j]*x[j]
+                    soma += Ab[i][j]*x_ant[j]
             }
             
             x[i] = (Ab[i][n]-soma)/Ab[i][i]
@@ -62,4 +61,4 @@ function gauss_seidel(Ab, x, tol, limit){
 
 // console.log(gauss_seidel(A, x, 0.00001, 300))
 
-module.exports = gauss_seidel
+module.exports = gauss_jacobi
