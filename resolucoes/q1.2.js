@@ -1,4 +1,4 @@
-const gauss_seidel = require("./gauss-seidel")
+const gauss_seidel = require("../sistemas-lineares/gauss-seidel")
 
 const Ab = [
     [15, 17, 19, 3890], // metal
