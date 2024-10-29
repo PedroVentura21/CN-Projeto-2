@@ -34,7 +34,7 @@ function gauss_seidel(Ab, x, tol, limit){
                     soma += Ab[i][j]*x[j]
             }
             
-            x[i] = (Ab[i][n]-soma)/A[i][i]
+            x[i] = (Ab[i][n]-soma)/Ab[i][i]
 
             let dk = Math.abs(x[i]-x_ant[i])
             dmax = Math.max(dk, dmax)
@@ -53,9 +53,9 @@ function gauss_seidel(Ab, x, tol, limit){
 // teste
 
 // var A = [
-//          [1, 1, 2, 15],
-//          [0, 1, 1, 2],
-//          [3, 0, 1, 29]
+//     [15, 17, 19, 3890], // metal
+//     [0.3, 0.4, 0.55, 95], // plático
+//     [1, 1.2, 1.5, 282] // borracha
 //         ]
 // var x = [0, 0, 0]
 
