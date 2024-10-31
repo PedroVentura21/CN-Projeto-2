@@ -1,4 +1,4 @@
-const org_sistema = require('./org_sistema')
+const org_sistema = require('../includes/org_sistema')
 
 function gauss_seidel(Ab, x, tol, limit){
     const n = x.length // quantidade de equações
