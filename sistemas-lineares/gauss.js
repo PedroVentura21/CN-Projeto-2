@@ -1,6 +1,8 @@
-const org_sistema = require("./org_sistema")
+const matrizAb = require("../includes/matrizAb")
 
-function gauss(Ab, n){
+function gauss(A, b){
+    const Ab = matrizAb(A, b) // matriz resultante da união das matrizes A e b
+    const n = A.length
 
     for(let k=0; k < n; k++){
         for(let i=0; i < n; i++){
