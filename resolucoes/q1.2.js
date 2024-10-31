@@ -1,11 +1,19 @@
-const gauss_seidel = require("../sistemas-lineares/gauss-seidel")
+const transposta = require("../includes/transposta")
+const gauss = require("../sistemas-lineares/gauss")
+
+// const Ab = [
+//     [15, 17, 19, 3890], // metal
+//     [0.3, 0.4, 0.55, 95], // plático
+//     [1, 1.2, 1.5, 282] // borracha
+// ]
 
 const Ab = [
-    [15, 17, 19, 3890], // metal
-    [0.3, 0.4, 0.55, 95], // plático
-    [1, 1.2, 1.5, 282] // borracha
+    [1, 1, 2, 4],
+    [2, -1, -1, 0],
+    [1, -1, -1, -1]
 ]
 
-var x = [0, 0, 0]
+const b = [3890, 95, 282] // matriz coluna da quantidade de elementos em gramas
 
-console.log(gauss_seidel(Ab, x, 0.01, 90))
+let T = transposta(A)
+console.log(gauss(T, b))
