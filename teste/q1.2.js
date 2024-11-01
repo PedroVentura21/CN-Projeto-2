@@ -1,13 +1,15 @@
 const transposta = require("../includes/transposta")
 const gauss = require("../sistemas-lineares/gauss")
 
-const Ab = [
-    [1, 1, 2],
-    [2, -1, -1],
-    [1, -1, -1]
+const A = [
+    [15, 0.3, 1],
+    [17, 0.4, 1.2],
+    [19, 0.55, 1.5]
 ]
 
-const b = [3890, 95, 282] // matriz coluna da quantidade de elementos em gramas
+const bKg = [3.89, 0.095, 0.282] // matriz coluna da quantidade de elementos em kg
 
-let T = transposta(A)
-console.log(gauss(T, b))
+let bg = bKg.map(m => m*1000)
+let At = transposta(A)
+
+console.log(gauss(At, bg))
