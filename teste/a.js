@@ -1,13 +1,5 @@
 const matrizAb = require("../includes/matrizAb")
 const transposta = require("../includes/transposta")
-var A = [
-    [1, 2 , 3],
-    [5, 6, 7]
-]
+const simpson = require("../sistemas-lineares/simpson")
 
-let b = [15, 55, 99]
-
-let T = transposta(A)
-
-console.log(T)
-console.log(matrizAb(T, b))
+console.log(simpson("log(x)", 1, 5, 10))
