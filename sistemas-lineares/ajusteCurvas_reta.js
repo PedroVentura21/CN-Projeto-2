@@ -1,7 +1,7 @@
 const gauss = require('./gauss');
 
 // PontosOrdenado = [{x: 10, y: 9}]
-function ajusteCurvas_reta (arr) {
+function ajusteCurvas_reta (arr, op) {
     const g1 = 1;
     let g2 = 'x';
 
@@ -27,20 +27,23 @@ function ajusteCurvas_reta (arr) {
         g1y_somat += g1*y;
         g2y_somat += g2*y
     })
-    console.log(`g1_somat_quad = ${g1_somat_quad} | g1g2_somat = ${g1g2_somat} | g2g1_somat = ${g2g1_somat} | g2_somat_quad = ${g2_somat_quad} | g1y_somat = ${g1y_somat} | g2y_fomat = ${g2y_somat}`);
+    // console.log(`g1_somat_quad = ${g1_somat_quad} | g1g2_somat = ${g1g2_somat} | g2g1_somat = ${g2g1_somat} | g2_somat_quad = ${g2_somat_quad} | g1y_somat = ${g1y_somat} | g2y_fomat = ${g2y_somat}`);
     const myArr = [
         [g1_somat_quad, g1g2_somat, g1y_somat],
         [g2g1_somat, g2_somat_quad, g2y_somat]
     ]
     const resultado = gauss(myArr, 2);
-    const c1 = resultado[0];
-    const c2 = resultado[1];
-
-    if (c2 < 0) {
-        return `${c1} - ${c2}x`;
+    const c1 = resultado[0]; // b
+    const c2 = resultado[1]; // a -> x
+    if (c2 > 0) {
+        console.log(`${c1} + ${c2}x`);
+    } else {
+        console.log(`${c1} ${c2}x`);
     }
 
-    return `${c1} + ${c2}x`;
+    op.forEach((x) => {
+        console.log(`${x} = ${c1 + c2*x}`);
+    })
 }
 
 module.exports = ajusteCurvas_reta;
