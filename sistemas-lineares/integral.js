@@ -1,4 +1,4 @@
-function simpson2(x, fx){
+function simpson(x, fx){
     const n = x.length-1
     const h = (x[n]-x[0])/n
 
@@ -16,4 +16,15 @@ function simpson2(x, fx){
     return (h/3)*(fx[0] + fx[n] + 4*somaImpar + 2*somaPar)
 }
 
-module.exports = simpson2
+function trapezio(x, fx){
+    const n = x.length-1
+    const h = (x[n]-x[0])/n
+
+    var soma = 0
+    for(let i=1; i<n; i++)
+        soma += fx[i]
+
+    return (h/2)*(fx[0] + 2*soma + fx[n])
+}
+
+module.exports = {trapezio, simpson}
