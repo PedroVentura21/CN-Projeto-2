@@ -22,3 +22,27 @@ const arr = [
 ]
 const op = [2010, 2020, 2030]
 ajusteCurvas_reta(arr, op);
+// PARA ENTRADAS VIA TERMINAL
+// var prompt = require('prompt-sync')();
+
+// const arr = [];
+// const op = [];
+
+// let amount = Number(prompt("Quantidade de pontos: "));
+// console.log("\n");
+// let counterAmount = 1;
+
+// while (amount > 0) {
+//     const x = Number(prompt(`x${counterAmount}: `));
+//     const y = Number(prompt(`y${counterAmount}: `));
+//     console.log("\n");
+
+//     arr.push({x: x, y: y});
+
+//     counterAmount++;
+//     amount--;
+// }
+
+// prompt("Valor x de interesse(Responda dividindo com virgula cada valor): ").split(',').forEach((str) => {
+//     op.push(Number(str));
+// });
