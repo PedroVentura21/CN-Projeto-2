@@ -16,4 +16,4 @@ Onde aqueles que responderam as questões foram:
 ## Requisitos para execução do código:
 (Os códigos de resolução foram feitos em Javascript)
   - Ter instalado o [node.js](https://nodejs.org/pt) - usado para compilar os códigos
-  - Ter instalado a biblioteca ```prompt-sync```
+  - Ter instalado a biblioteca ```prompt-sync``` - para entrada de dados pelo prompt de comando
