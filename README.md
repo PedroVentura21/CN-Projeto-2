@@ -17,3 +17,4 @@ Onde aqueles que responderam as questões foram:
 (Os códigos de resolução foram feitos em Javascript)
   - Ter instalado o [node.js](https://nodejs.org/pt) - usado para compilar os códigos
   - Ter instalado a biblioteca ```prompt-sync``` - para entrada de dados pelo prompt de comando
+  - Somente os arquivos das questões podem ser compilados - ex.: ```node q1.2.js```
